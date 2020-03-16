@@ -6,7 +6,7 @@ The repository is divided in 5 folders:
 0 Thesis manuscript
 -----------
 Has the main file "thesis.tex", which includes via \include all the other text. This is the .tex file that needs to be compiled to create the thesis pdf. To ensure that the links and references are updated, run each time
->> pdflatex + bibtex + pdflatex + pdflatex.
+> pdflatex + bibtex + pdflatex + pdflatex.
 
 1 Text contents
 -----------
