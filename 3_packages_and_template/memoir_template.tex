@@ -1,0 +1,44 @@
+
+%%%%%%%%%%%%%%%%% 
+% Table of contents:
+% It contains chapters - sections - subsections, with appropriate numbering
+% and indentation
+\settocdepth{subsection}
+\setsecnumdepth{subsection}
+
+%%%%%%%%%%%%%%%%% 
+% Set figure caption text with \small size (to avoid confusion with main text)
+\captionnamefont{\small}
+\captiontitlefont{\small}
+
+%%%%%%%%%%%%%%%%% 
+% create a glossary
+\makeglossaries
+
+%%%%%%%%%%%%%%%%% 
+% set margins
+\setlrmarginsandblock{0.2\textwidth}{*}{1}
+\setulmarginsandblock{0.2\textwidth}{*}{1}
+\checkandfixthelayout 
+
+%%%%%%%%%%%%%%%%% 
+% Page numbering
+% Will not start page numbers \pagenumbering{arabic} is written on the document
+\pagenumbering{gobble}
+% pagenumbers will be: right on right pages, left on left pages
+\makeoddfoot{plain}{}{}{\thepage}
+\makeevenfoot{plain}{\thepage}{}{}
+
+%%%%%%%%%%%%%%%%% 
+% Chapter style
+% other styles: default, ell, section, companion, bianchi...
+% check them all in "Chapter styles" in:
+% http://texdoc.net/texmf-dist/doc/latex/memoir/memman.pdf
+\chapterstyle{ell}
+
+%%%%%%%%%%%%%%%%% 
+% Page style
+\pagestyle{ruled}
+
+
+

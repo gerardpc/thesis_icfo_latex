@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STYLE
+\usepackage[utf8]{inputenc} % most of not english characters!
+\usepackage[T1]{fontenc} % accents and so on
+\usepackage[catalan, spanish, english]{babel} % languages, maybe more than one
+\usepackage{lmodern} % use latin modern fonts 
+\usepackage{setspace} % linespacing -> makes it good
+\usepackage{indentfirst} % indentation (space at the beginning) in new paragraphs
+\usepackage{graphicx} % for importing pictures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOME ARBITRARY NICE LATEX PACKAGES
+\usepackage{hyperref} % turn all your internal references into hyperlinks
+\usepackage[square, sort, numbers]{natbib} % Journal style bibliography managmenet. Bibliography files in the bibtex syntax are expected
+\setcitestyle{numbers} % cite with numbers
+\usepackage{verbatim} % inline verbatim/typewriter characters. Use \verb
+\usepackage[pangram]{blindtext} % generates dummy text with \blindtext \Blindtext \blinddocument \Blinddocument
+\usepackage[toc, acronym, style=super, automake]{glossaries} % to create a nice glossary
+\usepackage{csquotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MATHS AND SCIENCE PACKAGES
+\usepackage{amsmath, amsthm, amscd, amssymb} % the AMS packages:
+% amsmath: provides miscellaneous enhancements for docs. containing mathematical formulas. For instance \align
+% amsthm: theorems and so on
+% amssymb: extended symbol collection
+% amscd: commutative diagrams
+\newtheorem{theorem}{Theorem} % so that it doesn't complain when adding theorems
+\usepackage[all,cmtip]{xy} % more on diagrams, more arrows.
+\usepackage{listings} % Write nice code in defined language. Use \begin{lstlisting}
+\usepackage{physics} % brakets and other cool stuff

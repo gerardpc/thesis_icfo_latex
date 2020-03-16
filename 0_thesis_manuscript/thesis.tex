@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GERARDS's THESIS TEMPLATE
+%
+% Includes references with Bibtex. To compile run:
+% pdflatex + bibtex + pdflatex + pdflatex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% memoir: like "book" but more customizable
+% b5paper: paperback book size
+% 11pt: font size
+% twoside: alternate pagenumbers
+% openright: chapters start on recto side
+% draft (optional): marks warnings, overboxes, doesn't include images yet, etc. Good option for checking the template before publication.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File version: 
+% 0 - GP Conangla, 17.02.20:
+% To do: revise all Chapter numbers
+%		 include new references, not available at. beginning of thesis
+%		 FALTA CITES ALS THESIS COMMITEE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[b5paper, 11pt, twoside, openright]{memoir}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE:
+% 1. PACKAGES
+% Latex packages (add or remove your own)
+\input{../3_packages_and_template/packages.tex}
+
+% 2. MY OWN DEFINITIONS
+% math mode defs., custom environments, etc.
+\input{../3_packages_and_template/def_shortcuts.tex}
+
+% 3. DOCUMENT FORMATTING AND STYLE
+% To change chapter style, margins, headers, etc. 
+% modify "memoir_template.tex"
+\input{../3_packages_and_template/memoir_template.tex}
+
+% 4. GLOSSARY ENTRIES
+\input{../1_text_contents/glossary.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT BEGINS HERE
+\begin{document}
+% TITLE PAGE
+\input{../1_text_contents/title.tex}
+
+% ABSTRACT
+\input{../1_text_contents/abstract.tex}
+\cleardoublepage
+\aliaspagestyle{cleared}{plain} % One blank page
+
+% ACKNOWLEDGEMENTS
+\input{../1_text_contents/acknowledgements.tex}
+\cleardoublepage
+
+% TABLE OF CONTENTS
+\pagenumbering{arabic} % Start page numbering here
+\begin{KeepFromToc} % Do not include table of contents page in table of contents
+  \tableofcontents
+\end{KeepFromToc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN TEXT (i.e. CHAPTERS)
+%%%%%%%%%%%
+% CHAPTER EXAMPLE
+% \chapter{chaptername}
+% \begin{summary}
+% bla bla bla
+% \end{summary
+% Chapter contents
+%%%%%%%%%%%
+\input{../1_text_contents/main_chapters.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GLOSSARY and ACRONYMS
+% Obs: include automake in the package as \usepackage[automake]{glossaries}
+% or will have problems in compilation
+\printglossaries
+% Add all entries to glossary that were not used
+\glsaddallunused
+\cleardoublepage
+
+% LIST OF FIGURES
+\listoffigures
+\cleardoublepage
+
+% LIST OF PUBLICATIONS
+\input{../1_text_contents/publications.tex}
+\cleardoublepage
+
+% ANNEXES
+\appendix
+\addcontentsline{toc}{chapter}{Annexes}
+\input{../1_text_contents/annexes.tex}
+\cleardoublepage
+
+% BIBLIOGRAPHY
+\bibliographystyle{unsrt}
+\bibliography{../1_text_contents/references}
+
+\end{document}
